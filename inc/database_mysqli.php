@@ -35,7 +35,7 @@ function find( $table = null, $id = null ) {
 	    
 	  } else {
 	    
-	    $sql = "SELECT * FROM " . $table;
+	    $sql = "SELECT * FROM " . $table . " WHERE concluida = false";
 	    $result = $database->query($sql);
 	    
 	    if ($result->num_rows > 0) {
